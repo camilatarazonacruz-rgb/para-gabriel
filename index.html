@@ -234,7 +234,11 @@ function showFinalMessage(){
 
 document.getElementById("start").addEventListener('click', ()=>{
   document.getElementById("start").style.display="none";
-  player.playVideo();
+
+  if (player && player.playVideo) {
+    player.playVideo();
+  }
+
   typeText();
 });
 </script>
